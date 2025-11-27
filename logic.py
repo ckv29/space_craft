@@ -69,11 +69,3 @@ def delete_mission(name):
 add_ship(1,"Millenium Falcon","YT-1300")
 
 add_ship(2,"blue seagull","111")
-
-#print(_Spaceships)
-
-#print(_Spaceships_dict["blue seagull"].type_)
-
-#update_ship_status("blue seagull","in mission")
-
-#print(_Spaceships_dict["blue seagull"].status)

@@ -76,7 +76,7 @@ def add_mission_controller():
     except ValidationError as err:
         return jsonify({"error": "Validation failed", "messages": err.messages}), 400
  
-    mission_id = data['spaceship_id']
+    mission_id = data['mission_id']
     name = data['name']
     goal = data['goal']
     status = data['status']
@@ -89,7 +89,7 @@ def add_mission_controller():
         return jsonify({"error": "Failed to add missions"}), 500
 
 
-@app.get('/api/v1/missiontatus/<mission>/<newstatus>')
+@app.get('/api/v1/missionstatus/<mission>/<newstatus>')
 def update_mission_status_controller(mission,newstatus):   
     result = update_mission_status(mission,newstatus)
     if result == "ok":
@@ -100,7 +100,7 @@ def update_mission_status_controller(mission,newstatus):
         return jsonify({"error": "Failed to update status"}), 500
 
 
-@app.delete('/api/v1/delemission/<mission>')
+@app.delete('/api/v1/deletemission/<mission>')
 def delete_mission_controller(mission):
     result = delete_mission(mission)
     if result == "ok":
